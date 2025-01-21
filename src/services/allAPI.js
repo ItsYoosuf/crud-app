@@ -30,7 +30,7 @@ export const createUser = async (user) => {
 // Function to update an existing user
 export const updateUser = async (id, user) => {
     try {
-        const response = await commonAPI('PUT', `${SERVER_URL}/${id}`, user);
+        const response = await commonAPI('PUT', `${SERVER_URL}/users/${id}`, user);
         return response.data; // Assuming response.data contains the updated user data
     } catch (error) {
         console.error("Error updating user:", error);
@@ -41,7 +41,7 @@ export const updateUser = async (id, user) => {
 // Function to delete a user
 export const deleteUser = async (id) => {
     try {
-        await commonAPI('DELETE', `${SERVER_URL}/${id}`);
+        await commonAPI('DELETE', `${SERVER_URL}/users/${id}`);
     } catch (error) {
         console.error("Error deleting user:", error);
         throw error;
