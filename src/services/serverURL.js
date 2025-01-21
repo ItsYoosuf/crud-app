@@ -1,3 +1,3 @@
-const SERVERURL = "http://localhost:5173/api"
+const SERVERURL = "https://crud-appserver-yi44.onrender.com"
 
 export default SERVERURL
