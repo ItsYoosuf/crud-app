@@ -7,7 +7,7 @@ import SERVER_URL from './serverURL' // Update this if necessary
 // Function to get all users
 export const getUsers = async () => {
     try {
-        const response = await commonAPI('GET', SERVER_URL);
+        const response = await commonAPI('GET', SERVER_URL+'/users');
         return response.data; // Assuming response.data contains the user data
     } catch (error) {
         console.error("Error fetching users:", error);
@@ -18,7 +18,7 @@ export const getUsers = async () => {
 // Function to create a new user
 export const createUser = async (user) => {
     try {
-        const response = await commonAPI('POST', SERVER_URL, user);
+        const response = await commonAPI('POST', SERVER_URL+'/users', user);
         console.log(response.data);
         return response.data; // Assuming response.data contains the created user data
     } catch (error) {
